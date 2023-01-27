@@ -20,8 +20,8 @@ public class RemoverFuncionario {
 			
 		}else{
 			for (int i = 0; i < funcionarios.size(); i++){
-				if(funcionarios.get(i).getNome().equals(excluirFuncionario)){
-					if (funcionarios.get(i).getNome().equals(excluirFuncionario)){
+				if(funcionarios.get(i).getNome().equalsIgnoreCase(excluirFuncionario)){
+					if (funcionarios.get(i).getNome().equalsIgnoreCase(excluirFuncionario)){
 						funcionarios.remove(i);
 						System.out.println("\nO funcionario '" + excluirFuncionario + "' foi removido do sistema! Segue abaixo lista atualizada!");
 						inexistente = false;
