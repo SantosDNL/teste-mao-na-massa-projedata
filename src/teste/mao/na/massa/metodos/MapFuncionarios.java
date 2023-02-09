@@ -9,7 +9,7 @@ import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class MapFuncionarios {
 
-	public void criarMap(List<Funcionario> funcionarios) {
+	public static void criarMap(List<Funcionario> funcionarios) {
 		HashMap<String, ArrayList<String>> mapFuncoes = new HashMap<String, ArrayList<String>>();
 
 		for (Funcionario funcionario : funcionarios) {

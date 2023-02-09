@@ -9,7 +9,7 @@ import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class ImprimirFuncionarios {
 	
-	public void imprimeFuncionarios(List<Funcionario> funcionarios) {
+	public static void imprimeFuncionarios(List<Funcionario> funcionarios) {
 		
 		System.out.printf("\n%10s %15s %10s %15s", "Nome:", "Nascimento:", "Salario:", "Funcao:");
 		System.out.println();

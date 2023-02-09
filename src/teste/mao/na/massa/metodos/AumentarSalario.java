@@ -8,7 +8,7 @@ import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class AumentarSalario {
 	
-	public void AumentaSalario(List<Funcionario> funcionarios) {
+	public static void AumentaSalario(List<Funcionario> funcionarios) {
 		
 		for (int i = 0; i < funcionarios.size(); i++) {
 			BigDecimal multiplicar = new BigDecimal("1.1");
@@ -16,9 +16,7 @@ public class AumentarSalario {
 			funcionarios.get(i).setSalario(salarioAumentado);
 		}
 		
-		ImprimirFuncionarios imprimirFuncionarios =  new ImprimirFuncionarios();
-		
-		imprimirFuncionarios.imprimeFuncionarios(funcionarios);		
+		ImprimirFuncionarios.imprimeFuncionarios(funcionarios);		
 	}
 
 }

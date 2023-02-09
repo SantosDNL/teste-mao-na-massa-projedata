@@ -8,7 +8,7 @@ import java.util.List;
 import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class Aniversario {
-	public void verificaAniversario(List<Funcionario> funcionarios) {
+	public static void verificaAniversario(List<Funcionario> funcionarios) {
 		
 		System.out.println("\nOs funcionarios que fazem aniversario nos meses 10(Outubro) e/ou 12(Dezembro), sao:\n");
 		System.out.printf("%10s %15s %10s %15s", "Nome:", "Nascimento:", "Salario:", "Funcao:");

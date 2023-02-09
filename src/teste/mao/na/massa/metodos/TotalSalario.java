@@ -9,7 +9,7 @@ import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class TotalSalario {
 	
-	public void somarSalarios(List<Funcionario> funcionarios) {
+	public static void somarSalarios(List<Funcionario> funcionarios) {
 		
 		BigDecimal totalSalario = new BigDecimal("0");
 		for (Funcionario funcionario : funcionarios) {			
@@ -18,7 +18,7 @@ public class TotalSalario {
 		NumberFormat nf = NumberFormat.getInstance();
 		String salarioFormatado = nf.format(totalSalario);		
 		System.out.println("\n\nO total do salario de todos os funcionarios eh de: " + salarioFormatado);
-		//esse salário é a partir do aumento de 10% aplicado anteriormente
+		//esse salário taambém é aplicado a partir do aumento de 10%, caso solicitado
 		
 	}
 

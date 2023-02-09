@@ -27,7 +27,7 @@ public class App {
 		System.out.println(" 2 - Imprimir todos os funcionarios com todas suas informacoes, sendo que:"
 						+ "\n   - data deve ser exibido no formato dd/mm/aaaa"
 						+ "\n   - valor numerico deve ser exibida no formatado com separador de milhar como ponto e decimal como virgula");
-		System.out.println(" 3 - Os funcionários receberam 10% de aumento de salario, atualizar a lista de funcionarios com novo valor");
+		System.out.println(" 3 - Os funcionarios receberam 10% de aumento de salario, atualizar a lista de funcionarios com novo valor");
 		System.out.println(" 4 - Agrupar e imprimir os funcionarios por funcao em um MAP, sendo a chave a 'funcao' e o valor a 'lista de funcionarios'.");
 		System.out.println(" 5 - Imprimir os funcionarios que fazem aniversario no mes 10 e 12");
 		System.out.println(" 6 - Imprimir o funcionario com a maior idade, exibir os atributos: nome e idade");
@@ -54,10 +54,8 @@ public class App {
 		funcionarios.add(new Funcionario("Heloisa", "24/05/2003", new BigDecimal("1606.85"), "Eletricista"));
 		funcionarios.add(new Funcionario("Helena", "02/09/1996", new BigDecimal("2799.93"), "Gerente"));
 
-		ImprimirFuncionarios imprime = new ImprimirFuncionarios();
-
-		imprime.imprimeFuncionarios(funcionarios);
-
+		ImprimirFuncionarios.imprimeFuncionarios(funcionarios);
+		
 		menu();
 		int escolha = sc.nextInt();
 
@@ -69,10 +67,8 @@ public class App {
 
 				System.out.println(
 						"\nDigite o nome do Funcionario que deseja excluir, caso nao queira, basta apertar a tecla ENTER: \n");
-
-				RemoverFuncionario removerFuncionario = new RemoverFuncionario();
-
-				removerFuncionario.removeFuncionario(funcionarios);
+				
+				RemoverFuncionario.removeFuncionario(funcionarios);
 
 				System.out.println();
 
@@ -84,8 +80,8 @@ public class App {
 //			      • informação de valor numérico deve ser exibida no formatado com separador de milhar como ponto e decimal como vírgula.				
 
 				System.out.println();
-
-				imprime.imprimeFuncionarios(funcionarios);
+				
+				ImprimirFuncionarios.imprimeFuncionarios(funcionarios);
 
 				System.out.println();
 
@@ -97,12 +93,8 @@ public class App {
 				System.out.println(
 						"\n\nHouve um aumento de 10% no salario de todos os funcionarios, segue tabela atualizada!");
 
-				AumentarSalario aumentoSalario = new AumentarSalario();
+				AumentarSalario.AumentaSalario(funcionarios);
 
-				aumentoSalario.AumentaSalario(funcionarios);
-
-				// DecimalFormat formato = new DecimalFormat();
-				// formato.applyPattern("###,###.00");
 				break;
 
 			case 4:
@@ -110,50 +102,43 @@ public class App {
 //3.6 – Imprimir os funcionários, agrupados por função.
 
 				System.out.println("\nSegue abaixo lista dos funcionarios agrupados por funcao: \n");
-
-				MapFuncionarios criarMap = new MapFuncionarios();
-
-				criarMap.criarMap(funcionarios);
+				
+				MapFuncionarios.criarMap(funcionarios);
+				
 				break;
 
 			case 5:
-//3.8 – Imprimir os funcionários que fazem aniversário no mês 10 e 12.				
-				Aniversario aniversario = new Aniversario();
-
-				aniversario.verificaAniversario(funcionarios);
+//3.8 – Imprimir os funcionários que fazem aniversário no mês 10 e 12.
+				
+				Aniversario.verificaAniversario(funcionarios);
 
 				break;
 
 			case 6:
-//3.9 – Imprimir o funcionário com a maior idade, exibir os atributos: nome e idade.				
-				MaisVelho maisVelho = new MaisVelho();
-
-				maisVelho.verificaMaisVelho(funcionarios);
+//3.9 – Imprimir o funcionário com a maior idade, exibir os atributos: nome e idade.
+				
+				MaisVelho.verificaMaisVelho(funcionarios);
 
 				break;
 
 			case 7:
 //3.10 – Imprimir a lista de funcionários por ordem alfabética.
-
-				OrdemAlfabetica ordenar = new OrdemAlfabetica();
-
-				ordenar.ordenaAlfabetica(funcionarios);
+				
+				OrdemAlfabetica.ordenaAlfabetica(funcionarios);
 
 				break;
 
 			case 8:
 //3.11 – Imprimir o total dos salários dos funcionários.
-				TotalSalario totalSalario = new TotalSalario();
-
-				totalSalario.somarSalarios(funcionarios);
+				
+				TotalSalario.somarSalarios(funcionarios);
 
 				break;
 
 			case 9:
-//3.12 – Imprimir quantos salários mínimos ganha cada funcionário, considerando que o salário mínimo é R$1212.00.			
-				SalariosMinimo salariosMinimo = new SalariosMinimo();
-
-				salariosMinimo.QuantidadeSalario(funcionarios);
+//3.12 – Imprimir quantos salários mínimos ganha cada funcionário, considerando que o salário mínimo é R$1212.00.
+				
+				SalariosMinimo.QuantidadeSalario(funcionarios);
 
 				break;
 

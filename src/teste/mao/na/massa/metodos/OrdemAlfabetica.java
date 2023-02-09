@@ -7,15 +7,13 @@ import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class OrdemAlfabetica {
 
-	public void ordenaAlfabetica(List<Funcionario> funcionarios) {
+	public static void ordenaAlfabetica(List<Funcionario> funcionarios) {
 		
 		Collections.sort(funcionarios);
 		
 		System.out.println("\nSegue abaixo lista dos funcionarios por ordem alfabetica: ");
 		
-		ImprimirFuncionarios imprimirFuncionarios =  new ImprimirFuncionarios();
-		
-		imprimirFuncionarios.imprimeFuncionarios(funcionarios);
+		ImprimirFuncionarios.imprimeFuncionarios(funcionarios);
 		
 	}
 	

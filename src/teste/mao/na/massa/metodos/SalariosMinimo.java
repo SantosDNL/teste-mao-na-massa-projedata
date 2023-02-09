@@ -8,7 +8,7 @@ import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class SalariosMinimo {
 	
-	public void QuantidadeSalario(List<Funcionario> funcionarios) {
+	public static void QuantidadeSalario(List<Funcionario> funcionarios) {
 		
 		System.out.println("\n\nAbaixo estao os funcionarios e quantos salarios minimos recebem aproximadamente:\n");
 		BigDecimal salarioMinimo = new BigDecimal("1212");

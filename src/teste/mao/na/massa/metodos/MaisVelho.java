@@ -9,7 +9,7 @@ import teste.mao.na.massa.pessoa.funcionario.Funcionario;
 
 public class MaisVelho {
 	
-	public void verificaMaisVelho (List<Funcionario> funcionarios) {
+	public static void verificaMaisVelho (List<Funcionario> funcionarios) {
 		
 		int maiorIdade  = 0;
 		String pessoaMaisVelha = "";
